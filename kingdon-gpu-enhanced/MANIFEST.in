@@ -1,0 +1,48 @@
+# MANIFEST.in for Kingdon GPU-Enhanced Package
+# Ensures all necessary files are included in the distribution
+
+# Include documentation
+include INSTALLATION_README.md
+include *.md
+include *.txt
+
+# Include all source files
+recursive-include src *.py
+recursive-include src *.md
+recursive-include src *.txt
+recursive-include src *.js
+
+# Include test files
+recursive-include tests *.py
+
+# Include package metadata
+include setup.py
+include MANIFEST.in
+
+# Include any configuration files
+include *.cfg
+include *.ini
+include *.json
+
+# Exclude development and build artifacts
+exclude *.pyc
+exclude *.pyo
+exclude *~
+exclude .DS_Store
+exclude .git*
+exclude __pycache__
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
+recursive-exclude * *~
+
+# Exclude IDE files
+exclude .vscode
+exclude .idea
+exclude *.swp
+exclude *.swo
+
+# Include examples but exclude temporary files
+recursive-include examples *.py
+recursive-exclude examples *.tmp
+recursive-exclude examples *.log
