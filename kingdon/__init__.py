@@ -25,6 +25,7 @@ from sympy import symbols
 from .algebra import Algebra
 from .multivector import MultiVector
 from .operator_dict import AlgebraError # <--- ADDED THIS LINE
+from .batch_processor import BatchProcessor
 
 # Factory functions for easy object creation
 from .ga_factory import (
@@ -96,4 +97,5 @@ __all__ = [
 
 # Conditionally add GraphWidget to __all__ if imported
 if 'GraphWidget' in locals():
+
     __all__.append('GraphWidget')
