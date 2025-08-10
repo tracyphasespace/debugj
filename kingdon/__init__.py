@@ -83,6 +83,7 @@ __all__ = [
     'Algebra',
     'MultiVector',
     'AlgebraError', # Add AlgebraError here too
+    'BatchProcessor',
     'create_vector',
     'create_bivector',
     'create_scalar',
@@ -99,3 +100,4 @@ __all__ = [
 if 'GraphWidget' in locals():
 
     __all__.append('GraphWidget')
+
